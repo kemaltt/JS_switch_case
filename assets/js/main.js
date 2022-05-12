@@ -203,11 +203,11 @@ let output = document.getElementById('output-message')
 
 const showMessage = () => {
 
-    if (message.value) {
-        output.innerHTML = message.value
-    } else {
-        error.innerHTML = 'Gib bitte eine Nachricht ein!'
-    }
+    // if (message.value) {
+    //     output.innerHTML = message.value
+    // } else {
+    //     error.innerHTML = 'Gib bitte eine Nachricht ein!'
+    // }
 
     // switch (!!message.value) {
     //     case true:
@@ -219,5 +219,6 @@ const showMessage = () => {
     //         break;
     // }
 
+    message.value ? output.innerHTML = message.value : error.innerHTML = 'Gib bitte eine Nachricht ein!'
 
 }
