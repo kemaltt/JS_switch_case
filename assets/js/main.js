@@ -202,13 +202,22 @@ let error = document.getElementById('error-message')
 let output = document.getElementById('output-message')
 
 const showMessage = () => {
-    console.log(message.value);
+
     if (message.value) {
         output.innerHTML = message.value
-        error.innerHTML = ''
-    } else if (message.value == '') {
-        error.innerHTML = 'Gib bitte eine Nachricht ein'
+    } else {
+        error.innerHTML = 'Gib bitte eine Nachricht ein!'
     }
+
+    // switch (!!message.value) {
+    //     case true:
+    //         output.innerHTML = message.value
+    //         error.innerHTML = ''
+    //         break;
+    //     default:
+    //         error.innerHTML = 'Gib bitte eine Nachricht ein!'
+    //         break;
+    // }
 
 
 }
